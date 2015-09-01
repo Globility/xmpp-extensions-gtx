@@ -4,7 +4,7 @@
 	<groupId>net.gltd.gtms.xmpp.extensions</groupId>
 	<artifactId>xmpp-extensions-gtx</artifactId>
 	<name>GTMS XMPP Extensions - GTX</name>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<description>Globility Telephony XMPP Extensions for Globility Telephony Media Server.</description>
 	<packaging>jar</packaging>
 	<organization>
