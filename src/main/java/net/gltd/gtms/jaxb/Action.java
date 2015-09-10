@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlType;
 
-@XmlType(propOrder = { "command", "calls" })
+@XmlType(propOrder = { "command", "destination", "calls" })
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Action {
 
@@ -19,6 +19,8 @@ public class Action {
 
 	@XmlAttribute(name = "command")
 	private ActionCommand command;
+	@XmlAttribute(name = "destination")
+	private String destination;
 	@XmlElementWrapper(name = "calls", namespace = "http://gltd.net/protocol/gtx")
 	@XmlElement(name = "call", namespace = "http://gltd.net/protocol/gtx")
 	private Set<Call> calls;
@@ -37,5 +39,13 @@ public class Action {
 
 	public void setCalls(Set<Call> calls) {
 		this.calls = calls;
+	}
+
+	public String getDestination() {
+		return this.destination;
+	}
+
+	public void setDestination(String destination) {
+		this.destination = destination;
 	}
 }
